@@ -1,0 +1,13 @@
+=======================================================================
+               EMBEDDED DEVICE EVENT LOG SESSION DUMP                  
+=======================================================================
+Total Events: 6 | Maximum Capacity: 25
+
+ID       TYPE               DEVICE         TIMESTAMP              SEVERITY  
+-----------------------------------------------------------------------
+1001     SYS_BOOT           CONTROLLER_0   2026-10-16 01:06:41    INFO      
+1002     TEMP_WARNING       TEMP_SENSOR_1  2026-10-16 01:06:41    WARNING   
+1003     VOLT_NORMAL        POWER_SUPPLY   2026-10-16 01:06:41    INFO      
+1004     COMM_TIMEOUT       MODEM_4G       2026-10-16 01:06:41    ERROR     
+1005     BATTERY_LOW        BATTERY_PACK   2026-10-16 01:06:41    CRITICAL  
+1006     TEMPPS             1006           2026-10-16 01:06:55    INFO      
