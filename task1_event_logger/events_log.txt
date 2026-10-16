@@ -1,32 +1,7 @@
 =======================================================================
                EMBEDDED DEVICE EVENT LOG SESSION DUMP                  
 =======================================================================
-Total Events: 25 | Maximum Capacity: 25
+Total Events: 0 | Maximum Capacity: 25
 
 ID       TYPE               DEVICE         TIMESTAMP              SEVERITY  
 -----------------------------------------------------------------------
-1002     TEMP_WARNING       TEMP_SENSOR_1  2026-10-16 20:54:44    WARNING   
-1003     VOLT_NORMAL        POWER_SUPPLY   2026-10-16 20:54:44    INFO      
-1004     COMM_TIMEOUT       MODEM_4G       2026-10-16 20:54:44    ERROR     
-1005     BATTERY_LOW        BATTERY_PACK   2026-10-16 20:54:44    CRITICAL  
-1006     SYS_BOOT           CONTROLLER_0   2026-10-16 20:54:44    INFO      
-1007     SYS_BOOT           CONTROLLER_0   2026-10-16 20:54:44    INFO      
-1008     TEMP_WARNING       TEMP_SENSOR_1  2026-10-16 20:54:44    WARNING   
-1009     VOLT_NORMAL        POWER_SUPPLY   2026-10-16 20:54:44    INFO      
-1010     COMM_TIMEOUT       MODEM_4G       2026-10-16 20:54:44    ERROR     
-1011     BATTERY_LOW        BATTERY_PACK   2026-10-16 20:54:44    CRITICAL  
-1012     TEMP_WARNING       TEMP_SENSOR_1  2026-10-16 20:54:44    WARNING   
-1013     VOLT_NORMAL        POWER_SUPPLY   2026-10-16 20:54:44    INFO      
-1014     COMM_TIMEOUT       MODEM_4G       2026-10-16 20:54:44    ERROR     
-1015     BATTERY_LOW        BATTERY_PACK   2026-10-16 20:54:44    CRITICAL  
-1016     SYS_BOOT           CONTROLLER_0   2026-10-16 20:54:44    INFO      
-1017     SYS_BOOT           CONTROLLER_0   2026-10-16 20:54:44    INFO      
-1018     TEMP_WARNING       TEMP_SENSOR_1  2026-10-16 20:54:44    WARNING   
-1019     VOLT_NORMAL        POWER_SUPPLY   2026-10-16 20:54:44    INFO      
-1020     COMM_TIMEOUT       MODEM_4G       2026-10-16 20:54:44    ERROR     
-1021     BATTERY_LOW        BATTERY_PACK   2026-10-16 20:54:44    CRITICAL  
-1022     TEMP_WARNING       TEMP_SENSOR_1  2026-10-16 20:54:44    WARNING   
-1023     VOLT_NORMAL        POWER_SUPPLY   2026-10-16 20:54:44    INFO      
-1024     COMM_TIMEOUT       MODEM_4G       2026-10-16 20:54:44    ERROR     
-1025     SENSOR             SN012          2026-10-16 20:56:18    ERROR     
-1026     Sample             SAmpl012       2026-10-16 20:56:47    INFO      
