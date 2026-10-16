@@ -1,43 +1,40 @@
-# DSA Summative Project: 5 Embedded C Engineering Systems
+# DSA Summative Project (Tasks 1 to 5)
 
-**Course:** Data Structures & Algorithms (DSA)  
-**Target Score:** 30 / 30 Points (Mastery / Excellent across all 6 rubric criteria)  
-**Implementation Language:** Standard C (C99 / C11 compatible)
+A comprehensive Data Structures and Algorithms practical suite implemented in C (C99), covering Doubly Linked Lists, Binary Search Trees, Directed Graphs, Dijkstra's Shortest Path, and Lossless Huffman Coding.
 
 ---
 
-## Project Structure & Rubric Mapping
+## Project Structure
 
-| Task Directory | Real-World System | Core Data Structure & Algorithm | Max Points |
-| :--- | :--- | :--- | :---: |
-| [`task1_event_logger/`](file:///G:/DSA_Projects/dsa_summative_projects/task1_event_logger) | Embedded Device Event Logger | **Doubly Linked List** (Bounded 25-capacity FIFO with cursor navigation) | 5 pts |
-| [`task2_command_registry/`](file:///G:/DSA_Projects/dsa_summative_projects/task2_command_registry) | Network Device Command Registry | **Binary Search Tree (BST)** (File loader, In-Order sorting, typo suggestions, audit log) | 5 pts |
-| [`task3_server_network/`](file:///G:/DSA_Projects/dsa_summative_projects/task3_server_network) | Server Dependency Analyzer | **Directed Graph & Adjacency Matrix** (Incoming/outgoing queries, dynamic vertex/edge deletion) | 5 pts |
-| [`task4_medical_routing/`](file:///G:/DSA_Projects/dsa_summative_projects/task4_medical_routing) | Medical Supply Route Planner | **Weighted Graph & Dijkstra's Algorithm** (Minimum road distance, `parent[]` route reconstruction) | 5 pts |
-| [`task5_log_compression/`](file:///G:/DSA_Projects/dsa_summative_projects/task5_log_compression) | Firmware Diagnostic Compressor | **Huffman Coding** (Bitwise compression, header reconstruction, lossless verification) | 5 pts |
-| **All Tasks Documentation** | Technical Reports & Viva Prep | Detailed `README.md` in every folder with Big-O analysis and oral exam answers | 5 pts |
-| **TOTAL** | | | **30 pts** |
+* **`task1_event_logger/`**: Embedded Device Event Logger using a bounded Doubly Linked List (maximum 25 events, bidirectional navigation, automatic eviction of oldest event, zero memory leaks).
+* **`task2_command_registry/`**: Network Device Command Registry using a Binary Search Tree (file loading, in-order alphabetical traversal, 50-command cap, fuzzy typo suggestions, and security `audit.log` logging).
+* **`task3_server_dependency/`**: Server Dependency Network Analyzer using a Directed Graph with an Adjacency Matrix (bidirectional queries for incoming/outgoing dependencies, live matrix rendering, dynamic vertex/edge updates).
+* **`task4_medical_routing/`**: Emergency Medical Supply Routing using Dijkstra's Algorithm on a weighted road network (multi-hop shortest distance calculation, complete predecessor route reconstruction).
+* **`task5_log_compression/`**: Embedded Firmware Log Compression Utility using Huffman Coding (frequency analysis, min-heap priority queue, prefix code generation, bit-packing to `.huff`, lossless decompression, and automated verification).
+* **`docs/`**: Academic report and oral presentation guide containing technical design justifications, complexity analysis, standardized oral Q&A prep, and formal APA references.
 
 ---
 
-## How to Build and Run
+## Quick Build & Test Instructions
 
-### Quick Build All:
-Double-click `build_all.bat` or run in terminal:
-```cmd
-build_all.bat
+To compile and run automated tests for any task:
+
+```bash
+# Task 1
+cd task1_event_logger && ./test_task1.sh
+
+# Task 2
+cd task2_command_registry && ./test_task2.sh
+
+# Task 3
+cd task3_server_dependency && ./test_task3.sh
+
+# Task 4
+cd task4_medical_routing && ./test_task4.sh
+
+# Task 5
+cd task5_log_compression && ./test_task5.sh
 ```
 
-### Build Individual Tasks:
-Each task folder is completely independent and contains zero external library dependencies.
-For example, to run Task 1:
-```cmd
-cd task1_event_logger
-cl /W4 /MD main.c /Fe:event_logger.exe
-event_logger.exe
-```
-*(Or with GCC)*:
-```cmd
-gcc -Wall -Wextra -std=c99 main.c -o event_logger.exe
-./event_logger.exe
-```
+All programs are compiled with `-Wall -Wextra -pedantic -std=c99 -fsanitize=address,undefined -g` for maximum reliability and memory safety.
+
