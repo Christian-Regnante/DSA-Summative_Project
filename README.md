@@ -11,8 +11,6 @@ A comprehensive Data Structures and Algorithms practical suite implemented in C 
 * **`task3_server_dependency/`**: Server Dependency Network Analyzer using a Directed Graph with an Adjacency Matrix (bidirectional queries for incoming/outgoing dependencies, live matrix rendering, dynamic vertex/edge updates).
 * **`task4_medical_routing/`**: Emergency Medical Supply Routing using Dijkstra's Algorithm on a weighted road network (multi-hop shortest distance calculation, complete predecessor route reconstruction).
 * **`task5_log_compression/`**: Embedded Firmware Log Compression Utility using Huffman Coding (frequency analysis, min-heap priority queue, prefix code generation, bit-packing to `.huff`, lossless decompression, and automated verification).
-* **`docs/`**: Academic report and oral presentation guide containing technical design justifications, complexity analysis, standardized oral Q&A prep, and formal APA references.
-
 ---
 
 ## Quick Build & Test Instructions
