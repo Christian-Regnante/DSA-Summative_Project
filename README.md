@@ -19,20 +19,18 @@ To compile and run automated tests for any task:
 
 ```bash
 # Task 1
-cd task1_event_logger && ./test_task1.sh
+cd task1_event_logger && gcc main.c -o event_logger
 
 # Task 2
-cd task2_command_registry && ./test_task2.sh
+cd task2_command_registry && gcc main.c -o command_registry
 
 # Task 3
-cd task3_server_dependency && ./test_task3.sh
+cd task3_server_dependency && gcc main.c -o server_route
 
 # Task 4
-cd task4_medical_routing && ./test_task4.sh
+cd task4_medical_routing && gcc main.c -o medical_routing
 
 # Task 5
-cd task5_log_compression && ./test_task5.sh
+cd task5_log_compression && gcc main.c -o log_compression
 ```
-
-All programs are compiled with `-Wall -Wextra -pedantic -std=c99 -fsanitize=address,undefined -g` for maximum reliability and memory safety.
 
