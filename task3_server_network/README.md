@@ -60,18 +60,11 @@ This project models the server topology using a **Directed Graph** represented v
 
 ---
 
-## 5. Compilation & Execution
+## 5. Compilation & Execution (Linux)
 
-### Using MSVC (`cl.exe`):
-```cmd
-cl /W4 /MD main.c /Fe:server_network.exe
-server_network.exe
-```
-
-### Using GCC (MinGW):
-```cmd
-gcc -Wall -Wextra -std=c99 main.c -o server_network.exe
-./server_network.exe
+```bash
+gcc -Wall -Wextra -std=c99 -pedantic main.c -o server_network
+./server_network
 ```
 
 ---

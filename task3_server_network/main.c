@@ -13,12 +13,10 @@
  * ============================================================================
  */
 
-#ifndef _CRT_SECURE_NO_WARNINGS
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <ctype.h>
 
 #define MAX_SERVERS 20
@@ -55,11 +53,7 @@ void trim_whitespace(char* str) {
 /* Find index of a server by name (-1 if not found, case-insensitive) */
 int find_server(const ServerGraph* g, const char* name) {
     for (int i = 0; i < g->num_servers; i++) {
-#ifdef _WIN32
-        if (_stricmp(g->names[i], name) == 0) return i;
-#else
         if (strcasecmp(g->names[i], name) == 0) return i;
-#endif
     }
     return -1;
 }
