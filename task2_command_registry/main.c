@@ -14,9 +14,6 @@
  * ============================================================================
  */
 
-#ifndef _CRT_SECURE_NO_WARNINGS
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -339,6 +336,7 @@ int main(void) {
 
             case 'q':
             case 'Q':
+                printf("[FILE] Saving session... Audit log '%s' preserved.\n", AUDIT_LOG_FILE);
                 clear_registry(&reg);
                 printf("[EXIT] Session terminated cleanly. Goodbye!\n");
                 return 0;

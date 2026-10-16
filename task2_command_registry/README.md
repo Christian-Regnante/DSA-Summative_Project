@@ -50,18 +50,11 @@ This project implements a command registry backed by a **dynamically allocated B
 
 ---
 
-## 5. Compilation & Execution
+## 5. Compilation & Execution (Linux)
 
-### Using MSVC (`cl.exe`):
-```cmd
-cl /W4 /MD main.c /Fe:command_registry.exe
-command_registry.exe
-```
-
-### Using GCC (MinGW):
-```cmd
-gcc -Wall -Wextra -std=c99 main.c -o command_registry.exe
-./command_registry.exe
+```bash
+gcc -Wall -Wextra -std=c99 -pedantic main.c -o command_registry
+./command_registry
 ```
 
 ---
