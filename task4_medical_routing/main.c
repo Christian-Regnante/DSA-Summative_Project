@@ -13,12 +13,10 @@
  * ============================================================================
  */
 
-#ifndef _CRT_SECURE_NO_WARNINGS
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <ctype.h>
 
 #define MAX_LOCATIONS 10
@@ -56,11 +54,7 @@ void trim_whitespace(char* str) {
 /* Find location index by name (-1 if not found, case-insensitive) */
 int find_location(const MedicalNetwork* net, const char* name) {
     for (int i = 0; i < net->count; i++) {
-#ifdef _WIN32
-        if (_stricmp(net->names[i], name) == 0) return i;
-#else
         if (strcasecmp(net->names[i], name) == 0) return i;
-#endif
     }
     return -1;
 }

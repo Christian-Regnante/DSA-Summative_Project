@@ -67,18 +67,11 @@ void print_route_recursive(const int parent[], int curr, const MedicalNetwork* n
 
 ---
 
-## 5. Compilation & Execution
+## 5. Compilation & Execution (Linux)
 
-### Using MSVC (`cl.exe`):
-```cmd
-cl /W4 /MD main.c /Fe:medical_routing.exe
-medical_routing.exe
-```
-
-### Using GCC (MinGW):
-```cmd
-gcc -Wall -Wextra -std=c99 main.c -o medical_routing.exe
-./medical_routing.exe
+```bash
+gcc -Wall -Wextra -std=c99 -pedantic main.c -o medical_routing
+./medical_routing
 ```
 
 ---
