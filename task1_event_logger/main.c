@@ -4,7 +4,7 @@
  * Data Structure: Dynamically Allocated Doubly Linked List
  * 
  * Key Features:
- * - Fixed maximum capacity of 25 events (FIFO eviction of oldest at head)
+ * - Fixed maximum capacity of 25 events (FIFO remove of oldest at head)
  * - Chronological ordering: head = oldest, tail = newest
  * - Interactive bidirectional navigation cursor ('current')
  * - Safe memory management (zero memory leaks, no dangling pointers)
@@ -116,14 +116,14 @@ void evict_oldest(EventLogger* logger) {
         logger->current = NULL;
     }
 
-    printf("[MEMORY] Capacity reached (25). Evicted oldest event (ID: %d).\n", old_head->event_id);
+    printf("[MEMORY] Capacity reached (25). Removed oldest event (ID: %d).\n", old_head->event_id);
     free(old_head);
     logger->count--;
 }
 
 /* Add an event to the end (tail) of the list */
 void add_event(EventLogger* logger, const char* type, const char* device, const char* ts, const char* sev) {
-    /* If list has reached the 25-event limit, evict the oldest first */
+    /* If list has reached the 25-event limit, reemove the oldest first */
     if (logger->count >= MAX_EVENTS) {
         evict_oldest(logger);
     }
@@ -287,6 +287,25 @@ void load_sample_events(EventLogger* logger) {
     add_event(logger, "VOLT_NORMAL", "POWER_SUPPLY", ts, "INFO");
     add_event(logger, "COMM_TIMEOUT", "MODEM_4G", ts, "ERROR");
     add_event(logger, "BATTERY_LOW", "BATTERY_PACK", ts, "CRITICAL");
+    add_event(logger, "SYS_BOOT", "CONTROLLER_0", ts, "INFO");
+    add_event(logger, "SYS_BOOT", "CONTROLLER_0", ts, "INFO");
+    add_event(logger, "TEMP_WARNING", "TEMP_SENSOR_1", ts, "WARNING");
+    add_event(logger, "VOLT_NORMAL", "POWER_SUPPLY", ts, "INFO");
+    add_event(logger, "COMM_TIMEOUT", "MODEM_4G", ts, "ERROR");
+    add_event(logger, "BATTERY_LOW", "BATTERY_PACK", ts, "CRITICAL");
+    add_event(logger, "TEMP_WARNING", "TEMP_SENSOR_1", ts, "WARNING");
+    add_event(logger, "VOLT_NORMAL", "POWER_SUPPLY", ts, "INFO");
+    add_event(logger, "COMM_TIMEOUT", "MODEM_4G", ts, "ERROR");
+    add_event(logger, "BATTERY_LOW", "BATTERY_PACK", ts, "CRITICAL");
+    add_event(logger, "SYS_BOOT", "CONTROLLER_0", ts, "INFO");
+    add_event(logger, "SYS_BOOT", "CONTROLLER_0", ts, "INFO");
+    add_event(logger, "TEMP_WARNING", "TEMP_SENSOR_1", ts, "WARNING");
+    add_event(logger, "VOLT_NORMAL", "POWER_SUPPLY", ts, "INFO");
+    add_event(logger, "COMM_TIMEOUT", "MODEM_4G", ts, "ERROR");
+    add_event(logger, "BATTERY_LOW", "BATTERY_PACK", ts, "CRITICAL");
+    add_event(logger, "TEMP_WARNING", "TEMP_SENSOR_1", ts, "WARNING");
+    add_event(logger, "VOLT_NORMAL", "POWER_SUPPLY", ts, "INFO");
+    add_event(logger, "COMM_TIMEOUT", "MODEM_4G", ts, "ERROR");
 }
 
 int main(void) {
@@ -296,7 +315,7 @@ int main(void) {
     printf("====================================================\n");
     printf("      EMBEDDED DEVICE EVENT LOGGER (DOUBLY LINKED)  \n");
     printf("====================================================\n");
-    printf("Preloading 5 initial events for testing...\n");
+    printf("Preloading 25 initial events for testing...\n");
     load_sample_events(&logger);
 
     char choice;
