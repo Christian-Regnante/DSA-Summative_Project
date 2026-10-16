@@ -12,9 +12,6 @@
  * ============================================================================
  */
 
-#ifndef _CRT_SECURE_NO_WARNINGS
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -315,12 +312,12 @@ int main(void) {
     printf("====================================================\n");
     printf("      EMBEDDED DEVICE EVENT LOGGER (DOUBLY LINKED)  \n");
     printf("====================================================\n");
-    printf("Preloading 25 initial events for testing...\n");
-    load_sample_events(&logger);
+    /* Requirement 1: The list should initially be empty */
+    printf("[INIT] System initialized. Event log is initially empty (0/%d events).\n", MAX_EVENTS);
 
     char choice;
     while (1) {
-        printf("\nCommands: [n]ext | [p]rev | [a]dd | [c]urrent | [x]clear | [q]uit\n");
+        printf("\nCommands: [n]ext | [p]rev | [a]dd | [c]urrent | [x]clear | [l]oad samples | [q]uit\n");
         printf("Enter command: ");
         if (scanf(" %c", &choice) != 1) break;
 
@@ -345,12 +342,17 @@ int main(void) {
             case 'X':
                 clear_all_events(&logger);
                 break;
+            case 'l':
+            case 'L':
+                printf("\n[SIMULATION] Preloading sample events for testing...\n");
+                load_sample_events(&logger);
+                break;
             case 'q':
             case 'Q':
                 save_session_and_quit(&logger, "events_log.txt");
                 return 0;
             default:
-                printf("[INVALID] Unknown command '%c'. Valid options are n, p, a, c, x, q.\n", choice);
+                printf("[INVALID] Unknown command '%c'. Valid options are n, p, a, c, x, l, q.\n", choice);
                 break;
         }
     }

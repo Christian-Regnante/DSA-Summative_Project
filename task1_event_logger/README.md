@@ -41,22 +41,16 @@ NULL <--- [Event 1: Oldest] <=======> [Event 2] <=======> [Event 3: Newest] --->
 | Navigate Next/Prev | `n` / `p` | $O(1)$ | $O(1)$ |
 | Display Current | `c` | $O(1)$ | $O(1)$ |
 | Clear All Events | `x` | $O(N)$ where $N \le 25$ | Releases all heap memory |
+| Preload Samples (Demo) | `l` | $O(K)$ where $K = 24$ | $O(K)$ allocated |
 | Save to File | `q` | $O(N)$ where $N \le 25$ | $O(1)$ auxiliary |
 
 ---
 
-## 5. Compilation & Execution
+## 5. Compilation & Execution (Linux)
 
-### Using MSVC (`cl.exe`):
-```cmd
-cl /W4 /MD main.c /Fe:event_logger.exe
-event_logger.exe
-```
-
-### Using GCC (MinGW):
-```cmd
-gcc -Wall -Wextra -std=c99 main.c -o event_logger.exe
-./event_logger.exe
+```bash
+gcc -Wall -Wextra -std=c99 -pedantic main.c -o event_logger
+./event_logger
 ```
 
 ---
