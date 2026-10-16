@@ -61,18 +61,11 @@ This project implements **Huffman Coding**, an optimal prefix-free variable-leng
 
 ---
 
-## 5. Compilation & Execution
+## 5. Compilation & Execution (Linux)
 
-### Using MSVC (`cl.exe`):
-```cmd
-cl /W4 /MD main.c /Fe:log_compression.exe
-log_compression.exe
-```
-
-### Using GCC (MinGW):
-```cmd
-gcc -Wall -Wextra -std=c99 main.c -o log_compression.exe
-./log_compression.exe
+```bash
+gcc -Wall -Wextra -std=c99 -pedantic main.c -o log_compression
+./log_compression
 ```
 
 ---
